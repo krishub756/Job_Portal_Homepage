@@ -3,128 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <title>Job Application Portal</title>
+    <link rel="stylesheet" href="job_portal.css">
 </head>
+
 <body>
-  
-    <header>
-        <h1 align="center">GetAJobBroo</h1>
-        <p align="center">Job Application Portal</p>
-        <hr>
-        <nav align="center">
-            <a href="#">Home</a> |
-            <a href="#jobs">Jobs</a> |
-            <a href="#login">Login</a> |
-            <a href="#register">Register</a>
-        </nav>
-        <hr>
-    </header>
 
-    <section>
-        <h2>Find Your Dream Job</h2>
-        <form>
-            <label>Keywords:</label>
-            <input type="text" placeholder="Skills, Company">
-            <br><br>
-
-            <label>Location:</label>
-            <input type="text" placeholder="City">
-            <br><br>
-
-            <input type="submit" value="Search Jobs">
-        </form>
-    </section>
-
+<header>
+    <h1 align="center">GetAJobBroo</h1>
+    <p align="center">Job Application Portal</p>
     <hr>
+    <nav align="center">
+        <a href="#">Home</a> |
+        <a href="#jobs">Jobs</a> |
+        <a href="#login">Login</a> |
+        <a href="#register">Register</a>
+    </nav>
+</header>
 
-    <section id="jobs">
-        <h2>Recommended Jobs</h2>
+<section>
+    <h2>Find Your Dream Job</h2>
+    <form>
+        <label>Keywords:</label>
+        <input type="text" placeholder="Skills, Company"><br><br>
 
-        <article>
-            <h3>Software Engineer</h3>
-            <p>Company: ABC Technologies</p>
-            <p>Location: Bangalore</p>
-            <p>Experience: 0-2 Years</p>
-            <button>Apply</button>
-        </article>
-        <hr>
+        <label>Location:</label>
+        <input type="text" placeholder="City"><br><br>
 
-        <article>
-            <h3>Data Analyst</h3>
-            <p>Company: DataCorp</p>
-            <p>Location: Hyderabad</p>
-            <p>Experience: 1-3 Years</p>
-            <button>Apply</button>
-        </article>
-        <hr>
+        <input type="submit" value="Search Jobs">
+    </form>
+</section>
+<section id="add-job">
+  <h2>Add New Job Listing</h2>
 
-        <article>
-            <h3>Web Developer</h3>
-            <p>Company: WebWorks</p>
-            <p>Location: Remote</p>
-            <p>Experience: Fresher</p>
-            <button>Apply</button>
-        </article>
-    </section>
+  <form id="addJobForm">
+    <label>Job Title:</label>
+    <input type="text" id="title" required><br><br>
 
-    <hr>
+    <label>Company:</label>
+    <input type="text" id="company" required><br><br>
 
-    <section id="login">
-        <h2>Login</h2>
-        <form>
-            <label>Email:</label><br>
-            <input type="email"><br><br>
+    <label>Location:</label>
+    <input type="text" id="location" required><br><br>
 
-            <label>Password:</label><br>
-            <input type="password"><br><br>
+    <label>Experience:</label>
+    <input type="text" id="exp" required><br><br>
 
-            <input type="submit" value="Login">
-            <br><br>
-            <div align="center">
-                <button style="border-radius:20px; padding:8px 16px; border:1px solid #000; background:white;">
-                    Continue with <b>Google</b>
-                </button>
-            </div>
-        </form>
-    </section>
+    <input type="submit" value="Add Job">
+  </form>
+</section>
 
-    <hr>
+<section id="jobs">
+    <h2>Recommended Jobs</h2>
 
-    <section id="register">
-        <h2>Register</h2>
-        <form>
-            <label>Full Name:</label><br>
-            <input type="text"><br><br>
+    <p id="jobCount"></p>
+  <div id="jobList"></div>
+</section>
 
-            <label>Email:</label><br>
-            <input type="email"><br><br>
+<section id="login">
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label>Email:</label>
+        <input type="email"><br><br>
 
-            <label>Password:</label><br>
-            <input type="password"><br><br>
+        <label>Password:</label>
+        <input type="password"><br><br>
 
-            <label>Upload Resume:</label><br>
-            <input type="file"><br><br>
+        <input type="submit" value="Login"><br><br>
 
-            <label>Experience Level:</label><br>
-            <select>
-                <option>Fresher</option>
-                <option>1-3 Years</option>
-                <option>3-5 Years</option>
-                <option>5+ Years</option>
-            </select>
-            <br><br>
+        <div align="center">
+            <button class="google-btn">
+                Continue with <b>Google</b>
+            </button>
+        </div>
+    </form>
+</section>
 
-            <input type="submit" value="Register">
-            <br><br>
-            <p>Already registered? <a href="#login">Login here</a></p>
-        </form>
-    </section>
+<section id="register">
+    <h2>Register</h2>
+    <form id="registerForm">
+        <label>Full Name:</label>
+        <input type="text"><br><br>
 
-    <hr>
+        <label>Email:</label>
+        <input type="email"><br><br>
 
-    <footer>
-        <p>&copy; 2026 GetAJobBroo. All rights reserved.</p>
-    </footer>
+        <label>Password:</label>
+        <input type="password"><br><br>
 
+        <label>Upload Resume:</label>
+        <input type="file"><br><br>
+
+        <label>Experience Level:</label>
+        <select>
+            <option>Fresher</option>
+            <option>1-3 Years</option>
+            <option>3-5 Years</option>
+            <option>5+ Years</option>
+        </select><br><br>
+
+        <input type="submit" value="Register">
+        <p>Already registered? <a href="#login">Login here</a></p>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2026 GetAJobBroo. All rights reserved.</p>
+</footer>
+
+<script src="job_portal.js"></script>
 </body>
 </html>
-
